@@ -16,6 +16,6 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: module-update-kustomize
+    path: cyclops-module
     repoURL: https://github.com/petar-cvit/image-updater-demo
     targetRevision: main
