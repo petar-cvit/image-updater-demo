@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: demo=petarcvit223/logs:*
+    argocd-image-updater.argoproj.io/demo.force-update: "true" # needs to be set so image updater knows it needs to update the image even though image is not in status.summary.images
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/git-repository: https://github.com/petar-cvit/image-updater-demo
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/write-back-target: "kustomization:/cyclops-module"
+  name: my-module-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: cyclops
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: module-update-kustomize
+    repoURL: https://github.com/petar-cvit/image-updater-demo
+    targetRevision: main

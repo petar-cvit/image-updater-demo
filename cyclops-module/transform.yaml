@@ -1,0 +1,3 @@
+images:
+  - path: spec/values/general/image
+    kind: Module
