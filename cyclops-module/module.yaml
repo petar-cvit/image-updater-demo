@@ -20,7 +20,7 @@ spec:
     general:
       environment:
         ENVIRONMENT: production
-      image: petarcvit223/logs:0.0.6
+      image: petarcvit223/logs:0.0.12
     networking:
       expose: true
       port: 80
