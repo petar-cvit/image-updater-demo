@@ -4,4 +4,4 @@ configurations:
 - transform.yaml
 images:
 - name: petarcvit223/logs
-  newTag: 0.0.11
+  newTag: 0.0.12
