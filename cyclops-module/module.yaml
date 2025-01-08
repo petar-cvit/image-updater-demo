@@ -6,8 +6,6 @@ metadata:
     cyclops-ui.com/write-repo: https://github.com/petar-cvit/image-updater-demo
     cyclops-ui.com/write-revision: main
   creationTimestamp: null
-  labels:
-    app.kubernetes.io/instance: my-module-app
   name: module
 spec:
   targetNamespace: default
@@ -15,19 +13,16 @@ spec:
     path: app-template
     repo: https://github.com/cyclops-ui/templates
     sourceType: git
-    version: main
+    version: image-version
   values:
     general:
       environment:
         ENVIRONMENT: production
-      image: petarcvit223/logs
-      version: 0.0.6
+      image: nginx
     networking:
       expose: true
       port: 80
       type: ClusterIP
     scaling:
       replicas: 1
-status:
-  iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
-  templateResolvedVersion: ab2756886ba4c9e0e3122e3cbb6dc0338fadc617
+status: {}
