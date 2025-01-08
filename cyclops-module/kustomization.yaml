@@ -1,5 +1,5 @@
 resources:
-  - updating.yaml
+  - module.yaml
 
 configurations:
   - transform.yaml
