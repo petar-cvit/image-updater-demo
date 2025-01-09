@@ -20,13 +20,13 @@ spec:
     general:
       environment:
         ENVIRONMENT: production
-      image: petarcvit223/logs:0.0.12
+      image: petarcvit223/logs:0.0.13
     networking:
       expose: true
       port: 80
       type: ClusterIP
     scaling:
-      replicas: 1
+      replicas: 2
 status:
   iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
   templateResolvedVersion: 04034b6c967543c3b71b27ef4839493225f6e78c
