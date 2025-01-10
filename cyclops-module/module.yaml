@@ -26,7 +26,7 @@ spec:
       port: 80
       type: ClusterIP
     scaling:
-      replicas: 2
+      replicas: 3
 status:
   iconURL: https://github.com/cyclops-ui/cyclops/blob/main/cyclops-ui/src/static/img/default-template-icon.png?raw=true
   templateResolvedVersion: 04034b6c967543c3b71b27ef4839493225f6e78c
